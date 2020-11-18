@@ -20,3 +20,22 @@ TEST(TicTacToeBoardTest, unitTestName)
 	ASSERT_TRUE(true);
 }
 */
+// TEST(PracticeTest, is_not_simple_palindrome)
+// {
+//     Practice obj;
+//     bool actual = obj.isPalindrome("Not a palindrome");
+//     ASSERT_FALSE(actual);
+// }
+
+TEST(TicTacToeBoardTest, toggleTurnX)
+{
+	TicTacToeBoard obj;
+	obj.toggleTurn();
+	ASSERT_EQ(obj.toggleTurn(), X);
+}
+
+TEST(TicTacToeBoardTest, toggleTurnXtoO)
+{
+	TicTacToeBoard obj;
+	ASSERT_EQ(obj.toggleTurn(), O);
+}
