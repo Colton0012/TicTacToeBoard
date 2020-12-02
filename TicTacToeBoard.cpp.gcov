@@ -1,0 +1,63 @@
+        -:    0:Source:TicTacToeBoard.cpp
+        -:    0:Programs:2
+        -:    1:#include "TicTacToeBoard.h"
+        -:    2:/**
+        -:    3: * Class for representing a 3x3 Tic-Tac-Toe game board, using the Piece enum
+        -:    4: * to represent the spaces on the board.
+        -:    5:**/
+        -:    6:
+        -:    7://Constructor sets an empty board and specifies it is X's turn first
+        2:    8:TicTacToeBoard::TicTacToeBoard()
+        -:    9:{
+        2:   10:  turn = X;
+        8:   11:  for(int i=0; i<BOARDSIZE; i++)
+       24:   12:    for(int j=0; j<BOARDSIZE; j++)
+       18:   13:      board[i][j] = Blank;
+        2:   14:}
+        -:   15:
+        -:   16:/**
+        -:   17: * Switches turn member variable to represent whether it's X's or O's turn
+        -:   18: * and returns whose turn it is
+        -:   19:**/
+        3:   20:Piece TicTacToeBoard::toggleTurn()
+        -:   21:{
+        3:   22:  if(turn == X){
+        2:   23:    turn = O;
+        -:   24:  }else
+        -:   25:  {
+        1:   26:    turn = X;
+        -:   27:  }
+        3:   28:  return turn;
+        -:   29:}
+        -:   30:
+        -:   31:/**
+        -:   32: * Places the piece of the current turn on the board, returns what
+        -:   33: * piece is placed, and toggles which Piece's turn it is. placePiece does 
+        -:   34: * NOT allow to place a piece in a location where there is already a piece.
+        -:   35: * In that case, placePiece just returns what is already at that location. 
+        -:   36: * Out of bounds coordinates return the Piece Invalid value. When the game
+        -:   37: * is over, no more pieces can be placed so attempting to place a piece
+        -:   38: * should neither change the board nor change whose turn it is.
+        -:   39:**/ 
+    #####:   40:Piece TicTacToeBoard::placePiece(int row, int column)
+        -:   41:{
+    #####:   42:  return Invalid;
+        -:   43:}
+        -:   44:
+        -:   45:/**
+        -:   46: * Returns what piece is at the provided coordinates, or Blank if there
+        -:   47: * are no pieces there, or Invalid if the coordinates are out of bounds
+        -:   48:**/
+    #####:   49:Piece TicTacToeBoard::getPiece(int row, int column)
+        -:   50:{
+    #####:   51:  return Invalid;
+        -:   52:}
+        -:   53:
+        -:   54:/**
+        -:   55: * Returns which Piece has won, if there is a winner, Invalid if the game
+        -:   56: * is not over, or Blank if the board is filled and no one has won.
+        -:   57:**/
+    #####:   58:Piece TicTacToeBoard::getWinner()
+        -:   59:{
+    #####:   60:  return Invalid;
+        -:   61:}
